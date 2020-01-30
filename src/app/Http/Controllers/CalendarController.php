@@ -13,11 +13,13 @@ class CalendarController extends Controller
         $cal = Calendar::showCalendar($request->month, $request->year);
         $year = $request->year;
         $month = $request->month;
+        $day = $request->day;
         // $first = $cal["f"];
         $array = [
             "cal" => $cal,
             "year" => $year,
             "month" => $month,
+            "day" => $day,
         ];
         return view("calendar.index", $array);
     }
